@@ -11,7 +11,7 @@ const page = () => {
    <Provider store={store}>
     <div className='container mx-auto flex flex-col items-center justify-center'>
       <div className='container mx-auto text-center  mt-10'>
-       <Typography className='font-bold! text-4xl!'> Habit Tracker</Typography>
+       <Typography className='font-bold! text-4xl! '> Habit Tracker</Typography>
    
       </div>
       <div className='mt-30 w-full  h-15'>

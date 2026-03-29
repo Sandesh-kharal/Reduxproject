@@ -53,17 +53,11 @@ const habitSlice = createSlice({
                 }
             }
         },
-    removehabit: (state, action: PayloadAction<{ id: string; date: string }>) => {
-        const habit = state.habits.find(h => h.id === action.payload.id);
-        if (habit) {
-            const dateIndex = habit.completedDate.indexOf(action.payload.date);
-            if (dateIndex > -1) {
-                habit.completedDate.splice(dateIndex, 1);
-            } else {
-                habit.completedDate.push(action.payload.date);
-            }
-        }
-    },
+    
+    removehabit: (state, action: PayloadAction<{ id: string }>) => {
+      // Delete the entire habit object
+      state.habits = state.habits.filter(h => h.id !== action.payload.id);
+    }, 
     },
 })
 
